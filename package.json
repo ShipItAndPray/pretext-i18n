@@ -1,0 +1,55 @@
+{
+  "name": "@shipitandpray/pretext-i18n",
+  "version": "1.0.0",
+  "description": "Catch i18n text overflow at build time. No browser needed. Powered by Pretext.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "pretext-i18n": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "i18n",
+    "internationalization",
+    "overflow",
+    "text-overflow",
+    "localization",
+    "l10n",
+    "pretext",
+    "ci",
+    "build-time",
+    "lint"
+  ],
+  "author": "ShipItAndPray",
+  "license": "MIT",
+  "homepage": "https://shipitandpray.github.io/pretext-i18n/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ShipItAndPray/pretext-i18n.git"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  },
+  "dependencies": {
+    "@aspect-build/pretext": "^0.1.0"
+  }
+}
